@@ -7,21 +7,18 @@ const register = require('./controllers/register');
 const profile = require('./controllers/profile');
 const signin = require('./controllers/signin');
 const image = require('./controllers/image');
+const morgan = require('morgan');
 
 
 const db = knex({
   client: 'pg',
-  connection: {
-    host : '127.0.0.1',
-    user : 'postgres',
-    password : 'uyorked1',
-    database : 'smart-brain'
-  }
+  connection: process.env.POSTGRES_URI
 });
 
 const app = express();
 
 app.use(express.json());
+app.use(morgan('combined'));
 app.use(cors());
 
 

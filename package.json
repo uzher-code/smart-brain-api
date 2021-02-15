@@ -1,10 +1,10 @@
 {
   "name": "Smart-Brain-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "Backend server for Smart-Brain App",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +15,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "knex": "^0.21.12",
+    "morgan": "^1.10.0",
     "pg": "^8.4.2"
   },
   "devDependencies": {
