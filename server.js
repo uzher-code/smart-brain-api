@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const knex = require('knex');
 const bcrypt = require('bcryptjs');
+const redis = require('redis');
 
 const register = require('./controllers/register');
 const profile = require('./controllers/profile');
@@ -9,6 +10,9 @@ const signin = require('./controllers/signin');
 const image = require('./controllers/image');
 const morgan = require('morgan');
 const auth = require('./controllers/authorization');
+
+
+//setup  Redis:
 
 
 const db = knex({
@@ -29,7 +33,7 @@ app.get('/', (req, res) =>{
 
 app.post('/signin', (req, res) => { signin.signinAuthentication(req, res, db, bcrypt) });
 
-app.post('/register', (req,res) => { register.handleRegister(req, res, db, bcrypt) });
+app.post('/register', (req,res) => { register.registerAuthentication(req, res, db, bcrypt) });
 
 app.get('/profile/:id',  auth.requireAuth, (req, res) => { profile.handleProfileGet(req, res, db) });
 
@@ -42,3 +46,5 @@ app.post('/imageurl', auth.requireAuth, image.handleApiCall);
 app.listen(3000,() => {
 	console.log('app is running on port 3000')
 })
+
+
