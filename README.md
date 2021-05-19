@@ -56,11 +56,23 @@ v14.16.0
 git clone https://github.com/uzher-code/smart-brain-api.git
 ```
 
-
+The build command only needs to be run once to make sure all dependencies are installed (npm install)
 ```bash
-npm install
+docker-compose build
 ```
 
 ```bash
-npm start
+docker-compose up
+```
+
+Alternatively you can use
+```bash
+docker-compose up --build
+```
+Again you can omit the --build after successfully building the containers once
+
+
+To bring down the container
+```bash
+docker-compose down
 ```
