@@ -16,7 +16,7 @@ This project is currently live on [heroku](https://smart-brain-facedetector.hero
 
 # About
 
-SmartBrain: An online web app to detect faces in images using clarify api. This is only the back end repo. To see the frontend code, please check the [Smart Brain Api repo](https://github.com/uzher-code/smart-brain)
+SmartBrain: An online web app to detect faces in images using clarify api. This is only the back end repo. To see the frontend code, please check the [Smart Brain repo](https://github.com/uzher-code/smart-brain)
 
 **Tech Stack**
 
