@@ -29,6 +29,7 @@ PERN (PostgreSQL, Express, React, Node) - (Backend + Frontend)
 |            JWT             |
 |         PostgreSQL         |
 |            Redis           |
+|           Docker           |
 
 
 # Authors
