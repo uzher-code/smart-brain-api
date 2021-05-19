@@ -22,7 +22,7 @@ SmartBrain: An online web app to detect faces in images using clarify api. This 
 
 PERN (PostgreSQL, Express, React, Node) - (Backend + Frontend)
 
-|      Frontend Highlights       |
+|      Backend Highlights       |
 | :-------------------------: |
 |            Node            |
 |         Express            |
